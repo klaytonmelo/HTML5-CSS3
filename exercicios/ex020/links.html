@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+    <style>
+        /*SELETORES PERSONALIZADOS
+            #  = id
+            .  = class
+            :  = pseudo-classes
+            :: = pseudo-elemento
+            >  = children
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .especial {
+            background-color: rgb(226, 85, 85);
+        }
+        a:active {
+            color: yellow;
+        }
+        .especial::before {
+            content: '> ';
+        }
+        .especial::after{
+            content: ' <';
+        }
+    </style>
+</head>
+<body>
+    <h1>Persoalisando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" rel="externols" target="_blank">Repositório do git hub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" rel="externols" target="_blank" class="especial">Canal do youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com" rel="externols" target="_blank" class="especial" >Site do curso em video</a></li>
+    </ul>
+
+    <script>
+        var a = prompt('olá, tudo bom?')
+
+        if (a === 'sim'){
+            alert('seja bem vindo')
+        }
+        else{
+            alert('Seja bem vindo!')
+        }
+    </script>
+</body>
+</html>
